@@ -1,5 +1,5 @@
 # hvtiny
-**A MCU-oriented TinyML CNN model **
+**A MCU-oriented TinyML CNN model**
 
 A versatile CNN model giving acceptable accuracies while fiting inside MCU-oriented platforms. 
 Code in support for paper:
