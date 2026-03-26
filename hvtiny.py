@@ -6,6 +6,7 @@
 #----------------------------------------------------------------------
 
 def hvtiny(input_shape, num_classes, profil=[1, 3, 2], k=60, nl=(1,1), hid=True, flat=0, scale=True, drop=0.3, lr=0.001) :
+        import keras 
         kernel_size = (3,3)
         pool_size = (4,4)
         pool_strides = (2,2)
