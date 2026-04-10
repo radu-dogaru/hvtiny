@@ -2,7 +2,7 @@
 # Low complexity yet accurate model - well suited for MCU-oriented TinyML apps.
 # Copyright Radu DOGARU  radu_d@ieee.org , august-october 2025
 
-# Last updated Mar 26, 2026 - for sparse coding 
+# Last updated Mar 26, 2026 - for categorical coding 
 #----------------------------------------------------------------------
 
 def hvtiny(input_shape, num_classes, profil=[1, 3, 2], k=60, nl=(1,1), hid=True, flat=0, scale=True, drop=0.3, lr=0.001) :
@@ -22,8 +22,7 @@ def hvtiny(input_shape, num_classes, profil=[1, 3, 2], k=60, nl=(1,1), hid=True,
         else:
             inputs = keras.Input(shape=input_shape)
     	n = int(k)
-	#
-        x=data_augmentation(inputs)
+        x = data_augmentation(inputs)   # Augmenter defined outside 
         # convolutional macro-block 0
         x = keras.layers.Conv2D(n, kernel_size, padding=pad)(x)  # Separable
         for i in range(1, nl[0]+1) :
