@@ -21,7 +21,7 @@ def hvtiny(input_shape, num_classes, profil=[1, 3, 2], k=60, nl=(1,1), hid=True,
             inputs = keras.Input(shape=input_shape) / 255 #
         else:
             inputs = keras.Input(shape=input_shape)
-    	n = int(k)
+        n = int(k)
         x = data_augmentation(inputs)   # Augmenter defined outside 
         # convolutional macro-block 0
         x = keras.layers.Conv2D(n, kernel_size, padding=pad)(x)  # Separable
